@@ -1,4 +1,4 @@
-import css from './FriendListItem.module.css'
+import css from './FriendListItem.module.css';
 
 export default function FriendListItem({
     friend: {
@@ -13,7 +13,7 @@ export default function FriendListItem({
         textClass.push(css.isOnLine)
     } else {
         textClass.push(css.isOffLine)
-    };
+    }
 
     return (
         <div className={css.wrapper}>

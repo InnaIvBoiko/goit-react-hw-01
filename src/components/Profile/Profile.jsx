@@ -1,27 +1,25 @@
 import css from './Profile.module.css';
 
 export default function Profile({
-    userData: {
-        username,
+        name,
         tag,
         location,
-        avatar,
+        image,
         stats: {
             followers, 
             views,
             likes,    
         },
-    }
 }) {
     return (
         <div className={css.container}>
             <div>
                 <img
                     className={css.avatar}
-                    src={avatar}
+                    src={image}
                     alt="User avatar"
                 />
-                <p className={css.title}>{username}</p>
+                <p className={css.title}>{name}</p>
                 <p className={css.text}>@{tag}</p>
                 <p className={css.text}>{location}</p>
             </div>
