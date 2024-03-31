@@ -7,19 +7,11 @@ export default function FriendListItem({
         isOnline,
     },
 }) {
-    const textClass = [];
-
-    if (isOnline) {
-        textClass.push(css.isOnLine)
-    } else {
-        textClass.push(css.isOffLine)
-    }
-
     return (
         <div className={css.wrapper}>
             <img src={avatar} alt="Avatar" width="48" />
             <p className={css.title}>{name}</p>
-            <p className={textClass}>
+            <p className={isOnline ? css.isOnLine : css.isOffLine}>
                 {isOnline ? "Online" : "Offline"}
             </p>
         </div>
